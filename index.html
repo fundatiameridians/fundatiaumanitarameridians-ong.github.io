@@ -4,26 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundația Umanitară Meridian'S</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Resetare stiluri de bază */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fundal general - Verde deschis, pastelat și plăcut */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #eafaf1;
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Caseta centrală albă */
+        .container {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        /* Titlul principal */
+        h1 {
+            color: #27ae60;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Paragrafe și texte */
+        p {
+            color: #5d6d7e;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Lista cu obiective */
+        .goals-box {
+            text-align: left;
+            background-color: #f4fbf7;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            margin-bottom: 25px;
+        }
+
+        .goals-box h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .goals-box ul {
+            list-style-position: inside;
+            color: #5d6d7e;
+        }
+
+        .goals-box li {
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        /* Buton principal cu acțiune email */
+        .btn {
+            display: inline-block;
+            background-color: #27ae60;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #219653;
+        }
+
+        /* Link-ul simplu de email de la final */
+        .email-text {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .email-link {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Am pus un verde pastel plăcut, cald și primitor */
-    background-color: #e2f3e7; 
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;>
+<body>
 
     <div class="container">
         <!-- Numele Fundației -->
         <h1>Fundația Umanitară Meridian'S</h1>
         
-        <!-- Scurtă descriere a misiunii -->
+        <!-- Misiunea -->
         <p>Misiunea noastră este să aducem sprijin și speranță celor aflați în dificultate. Ne dedicăm proiectelor umanitare care schimbă vieți și dezvoltă comunități.</p>
         
-        <!-- Secțiune Obiective -->
-        <div style="text-align: left; margin: 20px 0; color: #555;">
+        <!-- Secțiunea Obiective -->
+        <div class="goals-box">
             <h3>Ce ne propunem:</h3>
             <ul>
                 <li>Sprijinirea familiilor defavorizate.</li>
@@ -32,8 +133,13 @@
             </ul>
         </div>
 
-        <!-- Buton de acțiune principal -->
-        <a href="mailto:fundatiameridians@gmail.com" class="btn">Implică-te si fa primul pas, trimite o scrisoare de intentie la adresa mail/Contact: fundatiameridians@gmail.com </a>
+        <!-- Butonul de email (Înlocuiește adresa de mai jos cu cea reală) -->
+        <a href="mailto:fundatiameridians@gmail.com" class="btn">Implică-te acum</a>
+        
+        <!-- Adresa de email text clicabilă -->
+        <span class="email-text">
+            Scrie-ne la: <a href="mailto:fundatiameridians@gmail.com" class="email-link">fundatiameridians@gmail.com</a>
+        </span>
     </div>
 
 </body>
