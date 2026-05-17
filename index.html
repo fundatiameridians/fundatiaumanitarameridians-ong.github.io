@@ -37,7 +37,7 @@
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -64,13 +64,40 @@
             color: #27ae60;
         }
 
-        /* Zona Centrală de Conținut */
+        /* Zona Centrală organizată pe 3 Coloane (Galerie Stânga - Conținut - Galerie Dreapta) */
         main {
             flex: 1;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            gap: 25px;
             padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Coloanele laterale pentru galeria foto */
+        .photo-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 220px;
+            flex-shrink: 0;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.2);
         }
 
         /* Caseta centrală albă */
@@ -204,6 +231,30 @@
         .email-link:hover {
             text-decoration: underline;
         }
+
+        /* Optimizare pentru ecrane medii și mobile */
+        @media (max-width: 1100px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .photo-column {
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .gallery-img {
+                width: calc(50% - 10px);
+                max-width: 250px;
+                height: 180px;
+            }
+            .container {
+                max-width: 100%;
+                order: -1; /* Textul rămâne sus pe mobil, galeriile coboară dedesubt */
+            }
+        }
     </style>
 </head>
 <body>
@@ -213,24 +264,26 @@
         <div class="nav-container">
             <a href="#top" class="logo">Fundația Umanitară Meridian S</a>
             <nav class="nav-links">
-                <!-- Redirecționează automat și fluid la caseta de donații prin id-ul de mai jos -->
                 <a href="#donatie-sectiune">Acasă</a>
-                <!-- Deschide direct aplicația de mail cu adresa dorită -->
                 <a href="mailto:fundatiameridians@gmail.com">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Conținutul Principal -->
+    <!-- Conținutul Principal (Structură simetrică pe 3 coloane) -->
     <main>
+        <!-- GALERIE FOTO STÂNGA -->
+        <div class="photo-column">
+            <img class="gallery-img" src="https://unsplash.com" alt="Educație copii">
+            <img class="gallery-img" src="https://unsplash.com" alt="Ajutor umanitar">
+        </div>
+        
+        <!-- CASETA CENTRALĂ EXISTENTĂ (NEMODIFICATĂ) -->
         <div class="container">
-            <!-- Numele Fundației -->
             <h1>Fundația Umanitară Meridian S</h1>
             
-            <!-- Misiunea -->
             <p class="mission-text">Misiunea noastră este să aducem sprijin și speranță celor aflați în dificultate. Ne dedicăm proiectelor umanitare care schimbă vieți și dezvoltă comunități.</p>
             
-            <!-- Secțiunea Obiective -->
             <div class="goals-box">
                 <h3>Ce ne propunem:</h3>
                 <ul>
@@ -240,7 +293,6 @@
                 </ul>
             </div>
 
-            <!-- Secțiune Date Bancare Umanitare cu ID-ul activat pentru butonul Acasa -->
             <div class="donation-box" id="donatie-sectiune">
                 <h3>Susține Activitatea Noastră 💝</h3>
                 <div class="bank-details">
@@ -254,12 +306,17 @@
                 </div>
             </div>
 
-            <!-- Butonul de email -->
             <a href="mailto:fundatiameridians@gmail.com" class="btn">Devino Voluntar / Contactează-ne</a>
+        </div>
+
+        <!-- GALERIE FOTO DREAPTA -->
+        <div class="photo-column">
+            <img class="gallery-img" src="https://unsplash.com" alt="Comunitate și sprijin">
+            <img class="gallery-img" src="https://unsplash.com" alt="Suport medical și bătrâni">
         </div>
     </main>
 
-    <!-- Subsol (Footer) reparat complet -->
+    <!-- Subsol (Footer) -->
     <footer>
         <p>&copy; 2026 Fundația Umanitară Meridian S. Toate drepturile rezervate.</p>
         <p>Scrie-ne la: <a href="mailto:fundatiameridians@gmail.com" class="email-link">fundatiameridians@gmail.com</a></p>
@@ -267,4 +324,3 @@
 
 </body>
 </html>
-
