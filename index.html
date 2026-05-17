@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundația Umanitară Meridian'S</title>
+    <title>Fundația Umanitară Meridians</title>
     <style>
         /* Resetare stiluri de bază */
         * {
@@ -117,19 +117,45 @@
             font-size: 15px;
         }
 
-        /* Secțiune nouă: Cum poți ajuta (Donații) */
+        /* Secțiune nouă: Caseta Detalii Bancare IBAN */
         .donation-box {
-            background-color: #fff9e6;
-            border: 1px dashed #f1c40f;
-            padding: 15px;
-            border-radius: 8px;
+            background-color: #fffdf3;
+            border: 2px dashed #f1c40f;
+            padding: 20px;
+            border-radius: 12px;
             margin-bottom: 25px;
-            font-size: 15px;
-            color: #7f8c8d;
+            text-align: left;
         }
 
-        .donation-box strong {
+        .donation-box h3 {
             color: #d35400;
+            font-size: 18px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .bank-details {
+            font-size: 15px;
+            color: #34495e;
+        }
+
+        .bank-details p {
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #f9e79f;
+            padding-bottom: 4px;
+        }
+
+        .bank-details p:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .bank-details strong {
+            color: #2c3e50;
+            font-family: 'Courier New', Courier, monospace; /* Font clar pentru cifre și litere IBAN */
+            font-size: 16px;
         }
 
         /* Buton principal cu acțiune email */
@@ -145,6 +171,7 @@
             transition: background 0.3s, transform 0.2s;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
             width: 100%;
+            text-align: center;
         }
 
         .btn:hover {
@@ -179,7 +206,7 @@
     <!-- Meniu de Navigare -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Fundația Umanitară Meridian'S</a>
+            <a href="#" class="logo">Fundația Meridians</a>
             <nav class="nav-links">
                 <a href="#">Acasă</a>
                 <a href="mailto:fundatiameridians@gmail.com">Contact</a>
@@ -196,7 +223,7 @@
             <!-- Misiunea -->
             <p class="mission-text">Misiunea noastră este să aducem sprijin și speranță celor aflați în dificultate. Ne dedicăm proiectelor umanitare care schimbă vieți și dezvoltă comunități.</p>
             
-            <!-- Secțiunea Obiective actualizată conform cerințelor tale -->
+            <!-- Secțiunea Obiective -->
             <div class="goals-box">
                 <h3>Ce ne propunem:</h3>
                 <ul>
@@ -206,13 +233,24 @@
                 </ul>
             </div>
 
-            <!-- Zonă nouă pentru viitoarele detalii bancare -->
+            <!-- Secțiune Date Bancare Umanitare -->
             <div class="donation-box">
-            <strong>Susține activitatea noastră:</strong> În curând vom adăuga detaliile pentru donații (Cont IBAN / Redirecționare 3.5%). Până atunci, ne poți contacta direct!
+                <h3>Sustine Activitatea Noastră 💝</h3>
+                <div class="bank-details">
+                    <p><span>Beneficiar:</span> <strong>Fundația Umanitară Meridian'S</strong></p>
+                    <!--RO48INGB0000999913484793-->
+                    <p><span>Cont IBAN (RON):</span> <strong>RO48INGB0000999913484793</strong></p>
+                    <!-- ING Bank N.V. Sucursala București -->
+                    <p><span>Banca:</span> <strong>NUME BANCA</strong></p>
+                    <p><span>Cod Fiscal (CUI):</span> <strong>Inserați CUI aici</strong></p>
+                    <p style="font-size: 13px; color: #7f8c8d; border: none; margin-top: 10px; text-align: center;">
+                        *Vă rugăm să menționați „Donație Umanitara” la detaliile plății.
+                    </p>
+                </div>
             </div>
 
             <!-- Butonul de email -->
-            <a href="mailto:fundatiameridians@gmail.com" class="btn">Implică-te acum</a>
+            <a href="mailto:fundatiameridians@gmail.com" class="btn">Devino Voluntar / Contactează-ne</a>
         </div>
     </main>
 
@@ -224,4 +262,3 @@
 
 </body>
 </html>
-
