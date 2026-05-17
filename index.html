@@ -12,49 +12,90 @@
             padding: 0;
         }
 
-        /* Fundal general - Verde deschis, pastelat și plăcut */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #eafaf1;
+            background-color: #eafaf1; /* Verde deschis, plăcut */
             color: #2c3e50;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Meniu de Navigare Superior */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #27ae60;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: #5d6d7e;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #27ae60;
+        }
+
+        /* Zona Centrală de Conținut */
+        main {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         /* Caseta centrală albă */
         .container {
             background-color: #ffffff;
-            padding: 35px;
+            padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.1);
+            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.08);
             text-align: center;
-            max-width: 450px;
+            max-width: 600px;
             width: 100%;
         }
 
-        /* Titlul principal */
         h1 {
             color: #27ae60;
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 15px;
         }
 
-        /* Paragrafe și texte */
-        p {
+        .mission-text {
             color: #5d6d7e;
             font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        /* Lista cu obiective */
+        /* Secțiunea Obiective */
         .goals-box {
             text-align: left;
             background-color: #f4fbf7;
-            padding: 15px 20px;
+            padding: 20px;
             border-radius: 8px;
             border-left: 4px solid #27ae60;
             margin-bottom: 25px;
@@ -62,8 +103,8 @@
 
         .goals-box h3 {
             color: #2c3e50;
-            font-size: 16px;
-            margin-bottom: 8px;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         .goals-box ul {
@@ -72,8 +113,23 @@
         }
 
         .goals-box li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-size: 15px;
+        }
+
+        /* Secțiune nouă: Cum poți ajuta (Donații) */
+        .donation-box {
+            background-color: #fff9e6;
+            border: 1px dashed #f1c40f;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 15px;
+            color: #7f8c8d;
+        }
+
+        .donation-box strong {
+            color: #d35400;
         }
 
         /* Buton principal cu acțiune email */
@@ -82,23 +138,27 @@
             background-color: #27ae60;
             color: #ffffff;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 14px 30px;
             border-radius: 30px;
             font-weight: bold;
             font-size: 16px;
-            transition: background 0.3s ease;
+            transition: background 0.3s, transform 0.2s;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
             width: 100%;
         }
 
         .btn:hover {
             background-color: #219653;
+            transform: translateY(-1px);
         }
 
-        /* Link-ul simplu de email de la final */
-        .email-text {
-            display: block;
-            margin-top: 20px;
+        /* Subsol profesional (Footer) */
+        footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            border-top: 1px solid #eafaf1;
             font-size: 14px;
             color: #7f8c8d;
         }
@@ -116,31 +176,52 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- Numele Fundației -->
-        <h1>Fundația Umanitară Meridian'S</h1>
-        
-        <!-- Misiunea -->
-        <p>Misiunea noastră este să aducem sprijin și speranță celor aflați în dificultate. Ne dedicăm proiectelor umanitare care schimbă vieți și dezvoltă comunități.</p>
-        
-        <!-- Secțiunea Obiective -->
-        <div class="goals-box">
-            <h3>Ce ne propunem:</h3>
-            <ul>
-                <li>Sprijinirea familiilor defavorizate.</li>
-                <li>Proiecte educaționale pentru copii, ghidare profesionala pentru adolescenti si reorientare/sustinere in reconversia profesionala.</li>
-                <li>Ajutor persoane varstnice ce prezinta dizabilitati sau dificultati majore in viata de zi cu zi.</li>
-            </ul>
+    <!-- Meniu de Navigare -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Fundația Umanitară Meridian'S</a>
+            <nav class="nav-links">
+                <a href="#">Acasă</a>
+                <a href="mailto:fundatiameridians@gmail.com">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Butonul de email (Înlocuiește adresa de mai jos cu cea reală) -->
-        <a href="mailto:fundatiameridians@gmail.com" class="btn">Implică-te acum</a>
-        
-        <!-- Adresa de email text clicabilă -->
-        <span class="email-text">
-            Scrie-ne la: <a href="mailto:fundatiameridians@gmail.com" class="email-link">fundatiameridians@gmail.com</a>
-        </span>
-    </div>
+    <!-- Conținutul Principal -->
+    <main>
+        <div class="container">
+            <!-- Numele Fundației -->
+            <h1>Fundația Umanitară Meridian'S</h1>
+            
+            <!-- Misiunea -->
+            <p class="mission-text">Misiunea noastră este să aducem sprijin și speranță celor aflați în dificultate. Ne dedicăm proiectelor umanitare care schimbă vieți și dezvoltă comunități.</p>
+            
+            <!-- Secțiunea Obiective actualizată conform cerințelor tale -->
+            <div class="goals-box">
+                <h3>Ce ne propunem:</h3>
+                <ul>
+                    <li>Sprijinirea familiilor defavorizate.</li>
+                    <li>Proiecte educaționale pentru copii, ghidare profesională pentru adolescenți și reorientare/susținere în reconversia profesională.</li>
+                    <li>Ajutor persoane vârstnice ce prezintă dizabilități sau dificultăți majore în viața de zi cu zi.</li>
+                </ul>
+            </div>
+
+            <!-- Zonă nouă pentru viitoarele detalii bancare -->
+            <div class="donation-box">
+                cc <strong>Susține activitatea noastră:</strong> În curând vom adăuga detaliile pentru donații (Cont IBAN / Redirecționare 3.5%). Până atunci, ne poți contacta direct!
+            </div>
+
+            <!-- Butonul de email -->
+            <a href="mailto:fundatiameridians@gmail.com" class="btn">Implică-te acum</a>
+        </div>
+    </main>
+
+    <!-- Subsol (Footer) -->
+    <footer>
+        <p>&copy; 2026 Fundația Umanitară Meridian'S. Toate drepturile rezervate.</p>
+        <p>Scrie-ne la: <a href="mailto:fundatiameridians@gmail.com" class="email-link">fundatiameridians@gmail.com</a></p>
+    </footer>
 
 </body>
 </html>
+
