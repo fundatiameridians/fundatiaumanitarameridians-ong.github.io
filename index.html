@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Fundația Umanitară Meridian S </title>
+    <title>Fundația Umanitară Meridian S</title>
     <style>
         /* Resetare stiluri de bază */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        /* Activează derularea lină pe pagină */
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -117,7 +122,7 @@
             font-size: 15px;
         }
 
-        /* Secțiune nouă: Caseta Detalii Bancare IBAN */
+        /* Secțiune: Caseta Detalii Bancare IBAN */
         .donation-box {
             background-color: #fffdf3;
             border: 2px dashed #f1c40f;
@@ -154,7 +159,7 @@
 
         .bank-details strong {
             color: #2c3e50;
-            font-family: 'Courier New', Courier, monospace; /* Font clar pentru cifre și litere IBAN */
+            font-family: 'Courier New', Courier, monospace;
             font-size: 16px;
         }
 
@@ -206,10 +211,9 @@
     <!-- Meniu de Navigare Optimizat -->
     <header id="top">
         <div class="nav-container">
-            <!-- Logo-ul oficial al fundației fără caractere speciale problematice -->
             <a href="#top" class="logo">Fundația Umanitară Meridian S</a>
             <nav class="nav-links">
-                <!-- Redirecționează automat și fluid la caseta de donații -->
+                <!-- Redirecționează automat și fluid la caseta de donații prin id-ul de mai jos -->
                 <a href="#donatie-sectiune">Acasă</a>
                 <!-- Deschide direct aplicația de mail cu adresa dorită -->
                 <a href="mailto:fundatiameridians@gmail.com">Contact</a>
@@ -221,7 +225,7 @@
     <main>
         <div class="container">
             <!-- Numele Fundației -->
-            <h1>Fundația Umanitară Meridian'S</h1>
+            <h1>Fundația Umanitară Meridian S</h1>
             
             <!-- Misiunea -->
             <p class="mission-text">Misiunea noastră este să aducem sprijin și speranță celor aflați în dificultate. Ne dedicăm proiectelor umanitare care schimbă vieți și dezvoltă comunități.</p>
@@ -236,16 +240,14 @@
                 </ul>
             </div>
 
-            <!-- Secțiune Date Bancare Umanitare -->
-            <div class="donation-box">
-                <h3>Sustine Activitatea Noastră 💝</h3>
+            <!-- Secțiune Date Bancare Umanitare cu ID-ul activat pentru butonul Acasa -->
+            <div class="donation-box" id="donatie-sectiune">
+                <h3>Susține Activitatea Noastră 💝</h3>
                 <div class="bank-details">
-                    <p><span>Beneficiar:</span> <strong>Fundația Umanitară Meridian'S</strong></p>
-                    <!-- RO48INGB0000999913484793 -->
+                    <p><span>Beneficiar:</span> <strong>Fundația Umanitară Meridian S</strong></p>
                     <p><span>Cont IBAN (RON):</span> <strong>RO48INGB0000999913484793</strong></p>
-                    <!-- Înlocuiește NUME BANCA cu banca la care este deschis contul -->
                     <p><span>Banca:</span> <strong>ING Bank N.V. Sucursala București</strong></p>
-                    <p><span>Cod Fiscal (CUI):</span> <strong> CUI:9556400</strong></p>
+                    <p><span>Cod Fiscal (CUI):</span> <strong>9556400</strong></p>
                     <p style="font-size: 13px; color: #7f8c8d; border: none; margin-top: 10px; text-align: center;">
                         *Vă rugăm să menționați „Donație Umanitara” la detaliile plății.
                     </p>
@@ -257,9 +259,9 @@
         </div>
     </main>
 
-    <!-- Subsol (Footer) -->
+    <!-- Subsol (Footer) reparat complet -->
     <footer>
-        <p>&copy; 2026 Fundația Umanitară Meridian'S. Toate drepturile rezervate.</p>
+        <p>&copy; 2026 Fundația Umanitară Meridian S. Toate drepturile rezervate.</p>
         <p>Scrie-ne la: <a href="mailto:fundatiameridians@gmail.com" class="email-link">fundatiameridians@gmail.com</a></p>
     </footer>
 
